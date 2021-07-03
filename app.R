@@ -15,7 +15,7 @@ ui <- fluidPage(titlePanel("BC Liquor Store prices"),
                                             selected = "WINE"),
                                selectInput("countryInput", "Country",
                                            choices = c("CANADA", "FRANCE", "ITALY"))),
-                  mainPanel("the results will go here")
+                  mainPanel(plotOutput("coolplot"))
                 )
                 
                 )
