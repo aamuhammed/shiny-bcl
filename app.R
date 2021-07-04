@@ -48,7 +48,7 @@ server <- function(input, output) {
         Country == input$countryInput
       )
     
-    ggplot(bcl, aes(Alcohol_Content)) +
+    ggplot(filtered, aes(Alcohol_Content)) +
       geom_histogram()
   })
 }
