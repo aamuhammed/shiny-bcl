@@ -37,7 +37,7 @@ ui <- fluidPage(titlePanel("BC Liquor Store prices"),
 #server
 server <- function(input, output) {
   output$coolplot <- renderPlot({
-    plot(rnorm(100))
+    plot(rnorm(input$priceInput[1]))
   })
 }
 
