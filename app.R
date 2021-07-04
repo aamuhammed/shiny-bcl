@@ -35,6 +35,10 @@ ui <- fluidPage(titlePanel("BC Liquor Store prices"),
                 ))
 
 #server
-server <- function(input, output) {}
+server <- function(input, output) {
+  output$coolplot <- renderPlot({
+    plot(rnorm(100))
+  })
+}
 
 shinyApp(ui = ui, server = server)
