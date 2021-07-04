@@ -51,6 +51,17 @@ server <- function(input, output) {
     ggplot(filtered, aes(Alcohol_Content)) +
       geom_histogram()
   })
+  output$results <- renderTable({
+    filtered <-
+      bcl %>%
+      filter(Price >= input$priceInput[1],
+             Price <= input$priceInput[2],
+             Type == input$typeInput,
+             Country == input$countryInput
+      )
+    filtered
+  })
 }
 
 shinyApp(ui = ui, server = server)
+
