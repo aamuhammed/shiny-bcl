@@ -1,4 +1,5 @@
 library(shiny)
+library(ggplot2)
 
 #Load data
 bcl <- read.csv("bcl-data.csv", stringsAsFactors = FALSE)
@@ -37,7 +38,8 @@ ui <- fluidPage(titlePanel("BC Liquor Store prices"),
 #server
 server <- function(input, output) {
   output$coolplot <- renderPlot({
-    plot(rnorm(input$priceInput[1]))
+    ggplot(bcl, aes(Alcohol_Content)) +
+      geom_histogram()
   })
 }
 
