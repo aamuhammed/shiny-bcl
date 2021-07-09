@@ -1,0 +1,13 @@
+name: bc_liquor_store_prices
+title: bc_liquor_store_prices
+username:
+account: abdullahi-muhammed
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4360724
+bundleId: 4794894
+url: https://abdullahi-muhammed.shinyapps.io/bc_liquor_store_prices/
+when: 1625646713.8778
+lastSyncTime: 1625646713.87781
+asMultiple: FALSE
+asStatic: FALSE
